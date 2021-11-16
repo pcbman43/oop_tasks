@@ -29,4 +29,10 @@ class UI {
 			}
 		}
 	}
+
+	deleteTasks(tasks){
+		while(tasks.firstChild){
+			tasks.removeChild(tasks.firstChild);
+		}
+	}
 }
