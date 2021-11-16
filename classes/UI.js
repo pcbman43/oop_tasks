@@ -45,4 +45,18 @@ class UI {
 			tasks.removeChild(tasks.firstChild);
 		}
 	}
+
+	getTasks(tasks) {
+		for(let i = 0; i < tasks.length; i++) {
+			// create list item
+			const li = this.addUIelement('li', 'collection-item', tasks[i].name);
+			// create link
+			const link = this.addUIelement('a', 'secondary-content', 'X', {'href':'#'});
+			// add link to list item
+			li.appendChild(link);
+			// find list to add created list item
+			const list = document.querySelector('ul');
+			list.appendChild(li);
+		}
+	}
 }
